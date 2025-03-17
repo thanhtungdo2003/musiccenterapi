@@ -62,7 +62,7 @@ namespace MusicCenterAPI.Controllers
             List<RecordData> datas = new List<RecordData>();
             foreach (DataRow row in playlist.Rows)
             {
-                datas.Add(new RecordData(api, Guid.Parse(row["RecordUid"].ToString())));
+                datas.Add(new RecordData(api, Guid.Parse(row["RecordUid"].ToString()).ToString()).SetUp(api));
             }
             return Ok(datas);
         }

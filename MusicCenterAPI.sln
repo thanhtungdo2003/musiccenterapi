@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TT_DBLib", "..\TT_DBLib\TT_
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicCenterGetaway", "..\MusicCenterGetaway\MusicCenterGetaway.csproj", "{3D86AE8E-A8FF-4F79-BFEA-38F0E562B340}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicBusniess", "..\MusicBusniess\MusicBusniess.csproj", "{5012561E-AC86-4C53-9134-17EC99118925}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicBusniess", "..\MusicBusniess\MusicBusniess.csproj", "{5012561E-AC86-4C53-9134-17EC99118925}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

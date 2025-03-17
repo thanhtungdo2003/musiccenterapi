@@ -36,8 +36,8 @@ namespace MusicCenterAPI.Controllers
             }
             if (Guid.TryParse(rid, out Guid recordUid))
             {
-                RecordData record = new RecordData(api, recordUid);
-                if (record.uid != null)
+                RecordData record = new RecordData(api, recordUid.ToString());
+                if (record.RecordUid != null)
                 {
                     var principal = api.DecodeToken(session_login_uid);
 

@@ -593,6 +593,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.36",
+          "Newtonsoft.Json": "13.0.1",
           "Swashbuckle.AspNetCore": "6.9.0",
           "System.IdentityModel.Tokens.Jwt": "8.3.0",
           "TT_DBLib": "1.0.0"

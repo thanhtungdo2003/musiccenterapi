@@ -27,10 +27,10 @@ namespace MusicCenterAPI.Controllers
             if (api.getValueByKey(DatabaseStruct.AccountTable, "UserName", "UserName", userName) != null) return Conflict("Tài khoản đã tồn tại.");
             var accountData = new AccountData(api)
             {
-                userName = userName,
-                hashPass = MusicCenterAPI.ComputeSha256Hash(password),
+                UserName = userName,
+                Password = MusicCenterAPI.ComputeSha256Hash(password),
                 Status = "ACTIVE",
-                signInDate = DateTime.Today
+                JoinDay = DateTime.Today
             };
             accountData.Save();
             var cookieOptions = new CookieOptions
@@ -40,18 +40,19 @@ namespace MusicCenterAPI.Controllers
                 SameSite = SameSiteMode.None
             };
             AccountData account = api.Authenticate(userName, MusicCenterAPI.ComputeSha256Hash(password));
-            Response.Cookies.Append("token_login", account.token, cookieOptions);
+            Response.Cookies.Append("token_login", account.Token, cookieOptions);
             return Ok();
         }
         [HttpPost("login/username={userName}&password={password}")]
         public IActionResult Login(string userName, string password)
         {
-            if (api.getValueByKey(DatabaseStruct.AccountTable, "UserName", "UserName", userName) == null)
+            AccountData accountData = new AccountData(api, userName);
+            if (!accountData.Exist())
             {
                 return Conflict("Tài khoản không tồn tại.");
             }
             AccountData account = api.Authenticate(userName, MusicCenterAPI.ComputeSha256Hash(password));
-            if (MusicCenterAPI.ComputeSha256Hash(password) == account.hashPass)
+            if (MusicCenterAPI.ComputeSha256Hash(password) == account.Password)
             {
                 var cookieOptions = new CookieOptions
                 {
@@ -59,7 +60,7 @@ namespace MusicCenterAPI.Controllers
                     Secure = true,
                     SameSite = SameSiteMode.None
                 };
-                Response.Cookies.Append("token_login", account.token, cookieOptions);
+                Response.Cookies.Append("token_login", account.Token, cookieOptions);
                 return Ok();
             }
             else
@@ -77,7 +78,10 @@ namespace MusicCenterAPI.Controllers
                 if (token == null) return Conflict("Phiên đăng nhập đã hết hạn!");
                 var principal = api.DecodeToken(token);
                 if (principal == null) return BadRequest();
-                return Ok(principal.FindFirst(ClaimTypes.Name)?.Value);
+                return Ok(new{
+                    username= principal.FindFirst(ClaimTypes.Name)?.Value,
+                    premium_ex = principal.FindFirst("PremiumEx")?.Value
+                });
             }
             return Conflict("Phiên đăng nhập đã hết hạn!");
 
