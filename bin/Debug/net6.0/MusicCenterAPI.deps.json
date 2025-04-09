@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "MusicCenterAPI/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNetCore.Authentication.Google": "6.0.36",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.36",
           "MusicBusniess": "1.0.0",
           "Ocelot": "23.3.4",
@@ -33,6 +34,14 @@
           "lib/net6.0/IPAddressRange.dll": {
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.0.0"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.Google/6.0.36": {
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.Authentication.Google.dll": {
+            "assemblyVersion": "6.0.36.0",
+            "fileVersion": "6.0.3624.51604"
           }
         }
       },
@@ -393,6 +402,13 @@
       "sha512": "sha512-3vLppw2bi+LjM/M5TRQBrQ2kRYFge3+aphf5FiKefEImBG/sUM5sYV2TVYbWnZTHTnW24Gc5CucsohGu/GN9gQ==",
       "path": "ipaddressrange/6.0.0",
       "hashPath": "ipaddressrange.6.0.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authentication.Google/6.0.36": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NNg7Ce9GC+UprcUIYPZlRwyNm/QBMbtOIyX+LgO3/Z4bAtmg7ZpNLMDGhwDeNWFqMaTPXtW2HQOb3hcV1Oja1A==",
+      "path": "microsoft.aspnetcore.authentication.google/6.0.36",
+      "hashPath": "microsoft.aspnetcore.authentication.google.6.0.36.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.36": {
       "type": "package",

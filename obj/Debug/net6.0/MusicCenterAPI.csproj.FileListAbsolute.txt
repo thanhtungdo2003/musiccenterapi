@@ -60,3 +60,4 @@ C:\Users\Thanh Tung\source\repos\MusicCenterAPI\bin\Debug\net6.0\Microsoft.Ident
 C:\Users\Thanh Tung\source\repos\MusicCenterAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\Thanh Tung\source\repos\MusicCenterAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\Thanh Tung\source\repos\MusicCenterAPI\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Thanh Tung\source\repos\MusicCenterAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.Google.dll

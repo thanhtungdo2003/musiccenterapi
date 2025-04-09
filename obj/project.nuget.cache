@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "ZKAjHaoguGA0bz8aYs3zLQNZ8+SWWTP3fMeAbSwLezf/qVOwpslMPEApCuykZEr7rf4VaxiMyzq/CoBB77GmXQ==",
+  "dgSpecHash": "dQ4ER71Hnzzxyivh5iVS7J4t56gqsLT0dhm4xcaCadKRvO3WgarlEO1Y83iaSjDTnYdNRH34Ot6mmAIpEep/Xg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Thanh Tung\\source\\repos\\MusicCenterAPI\\MusicCenterAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Thanh Tung\\.nuget\\packages\\fluentvalidation\\11.10.0\\fluentvalidation.11.10.0.nupkg.sha512",
     "C:\\Users\\Thanh Tung\\.nuget\\packages\\ipaddressrange\\6.0.0\\ipaddressrange.6.0.0.nupkg.sha512",
+    "C:\\Users\\Thanh Tung\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\6.0.36\\microsoft.aspnetcore.authentication.google.6.0.36.nupkg.sha512",
     "C:\\Users\\Thanh Tung\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.36\\microsoft.aspnetcore.authentication.jwtbearer.6.0.36.nupkg.sha512",
     "C:\\Users\\Thanh Tung\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\6.0.33\\microsoft.aspnetcore.jsonpatch.6.0.33.nupkg.sha512",
     "C:\\Users\\Thanh Tung\\.nuget\\packages\\microsoft.aspnetcore.middlewareanalysis\\6.0.33\\microsoft.aspnetcore.middlewareanalysis.6.0.33.nupkg.sha512",
